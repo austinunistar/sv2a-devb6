@@ -1,3 +1,0 @@
----
-# vars file for ansible-server
-ansible_key_pass: /vars/credentials.yml
