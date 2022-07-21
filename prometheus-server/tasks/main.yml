@@ -1,0 +1,48 @@
+---
+  - name: create docker-compose configuration folder
+    ansible.builtin.file:
+      path: '/var/admin'
+      state: directory
+      owner: 'root'
+      group: 'root'
+      
+  - name: create promethues & grafana data folder
+    ansible.builtin.file:
+      path: "{{ item }}"
+      state: directory
+      owner: 'nobody'
+      group: 'nogroup'
+    loop: 
+      - /var/admin/prometheus-grafana/grafana
+      - /var/admin/prometheus-grafana/grafana/provisioning
+      - /var/admin/prometheus-grafana/grafana/provisioning/dashboards
+      - /var/admin/prometheus-grafana/grafana/provisioning/datasources
+      - /var/admin/prometheus-grafana/prometheus
+
+  - name: copy promethues & grafana configuation
+    ansible.builtin.template:
+      src: "{{ item.src }}"
+      dest: "{{ item.dest }}"
+      owner: 'root'
+      group: 'root'
+    loop:
+      - { src: 'prometheus.yml', dest: '/var/admin/prometheus-grafana/prometheus/prometheus.yml' }
+      - { src: 'config.monitoring.j2', dest: '/var/admin/prometheus-grafana/grafana/config.monitoring' }
+      - { src: 'dashboard.yml', dest: '/var/admin/prometheus-grafana/grafana/provisioning/dashboards/dashboard.yml' }
+      - { src: 'datasource.yml', dest: '/var/admin/prometheus-grafana/grafana/provisioning/datasources/datasource.yml' }
+  
+
+  - name: create docker-compose file
+    ansible.builtin.template:
+      src: 'docker-compose.yml'
+      dest: '/var/admin/prometheus-grafana'
+      owner: 'root'
+      group: 'root'
+      mode: '0644'
+      backup: yes
+
+  - name: start docker-compose service
+    ansible.builtin.shell: 
+      cmd: 'docker-compose -f docker-compose.yml up -d'
+      chdir: '/var/admin/prometheus-grafana'
+    tags: docker_compose_start

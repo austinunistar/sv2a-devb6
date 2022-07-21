@@ -1,0 +1,56 @@
+---
+#  - name: apt update
+#    ansible.builtin.shell: |
+#            apt update
+
+#  - name: update all packages to their latest version
+#    ansible.builtin.apt:
+#      name: "*"
+#      state: latest
+
+  - name: install a few prerequisite packages
+    ansible.builtin.apt:
+      name: "{{ item }}"
+      state: present
+    loop:
+      - apt-transport-https
+      - ca-certificates
+      - curl 
+      - software-properties-common
+    ignore_errors: yes
+
+  - name: add the GPG key for the official Docker repository
+    ansible.builtin.shell: |
+           curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+ 
+  - name: add the Docker repository to APT sources
+    ansible.builtin.shell: |
+            add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+    
+  - name: update all packages to their latest version
+    ansible.builtin.apt:
+      name: "*"
+      state: latest
+
+  - name: make sure you are about to install from the Docker repo instead of the default Ubuntu repo
+    ansible.builtin.shell: |
+            apt-cache policy docker-ce
+
+  - name: install docker-ce packages
+    ansible.builtin.apt:
+      name: 'docker-ce'
+      state: present
+
+  - name:  
+    ansible.builtin.shell: |
+            curl -L https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+    tags: docker_compose_install
+
+  - name: set the permissions for docker-compose
+    ansible.builtin.file: 
+      path: /usr/local/bin/docker-compose
+      owner: 'root'
+      group: 'root'
+      mode: '0755'
+    tags: docker_compose_install
+
