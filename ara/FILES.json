@@ -1,0 +1,740 @@
+{
+ "files": [
+  {
+   "name": ".",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b98fbb37db5b23bc5cfdcd16793206a5a7120a7b01f75374e5e0888376e4691c",
+   "format": 1
+  },
+  {
+   "name": "tests",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/test_tasks.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3841f79f612c51b772d03861702dc1935cde576d12c82b7a62a82c2a9d1fbefb",
+   "format": 1
+  },
+  {
+   "name": "tests/vars",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "tests/vars/mysql_tests.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f4d76b73e5d03327b74f4835b34109cbdd1d2e98e992580237d50f61a5ca302c",
+   "format": 1
+  },
+  {
+   "name": "tests/vars/distributed_sqlite_tests.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cc77c303987f67a29c0ed801af07c7d3a235047603367bb345c2e99f1f36bbc6",
+   "format": 1
+  },
+  {
+   "name": "tests/vars/postgresql_tests.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8656272ed2c2f1fe0e800b19c6abc168f7402aa2fb57abee186e174f55bc6ba5",
+   "format": 1
+  },
+  {
+   "name": "tests/vars/nginx_tests.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "162758b0e3b0b532ea45358eec2faa68364d4f41292072d2b6401cb50c691668",
+   "format": 1
+  },
+  {
+   "name": "tests/zuul_pre_multinode_networking.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e6f4acc20559cc88d2873ad675aceebbace8312b64fafdc07714234293a2c685",
+   "format": 1
+  },
+  {
+   "name": "tests/with_postgresql.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8748da659eb9280235513a1198e9c2d78c440a22d4ea2255ee41cc985e4b4610",
+   "format": 1
+  },
+  {
+   "name": "tests/test_tasks.yaml.orig",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8072be1244f58cc4897a5e5638434b616954d28b7307688bebd90137f9346810",
+   "format": 1
+  },
+  {
+   "name": "tests/zuul_post_with_mysql.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "68bd5a63afbe1dcfb5dfa901f864df642cbb7bd59bc451a4756c2afd6497671e",
+   "format": 1
+  },
+  {
+   "name": "tests/zuul_metadata.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "56eb1aca6947ff110a8409049cc15e7532f81108cce69276581d2342ecf099a9",
+   "format": 1
+  },
+  {
+   "name": "tests/with_mysql.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2e7dfd85a30ff2577ea4153e07254c7715d7eea13425eec60975764f38276fdb",
+   "format": 1
+  },
+  {
+   "name": "tests/with_fedora_packages.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1e84f5371ca6ab25a2244d444d338656da264df1fa4ec5f7769f26c08e74cb11",
+   "format": 1
+  },
+  {
+   "name": "tests/zuul_post_with_postgresql.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4dad74a55bfd1034acc05cfdb23a379f7444081280f869b08900bb045908350e",
+   "format": 1
+  },
+  {
+   "name": "tests/zuul_post_logs.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2e5194b07d9147e4ea3427dee1af827d3a7e847b18d48a781f2f191e016691e8",
+   "format": 1
+  },
+  {
+   "name": "tests/with_nginx.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cf4f9a0fa030f361441f15fc549f08ac4fa3379cc4d73cc2b6a0a3d35ab235e4",
+   "format": 1
+  },
+  {
+   "name": "tests/with_distributed_sqlite.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "387605b86d3374698433cd802be9875198348a6d8c8bca10c1e4e2b6bbeaa30c",
+   "format": 1
+  },
+  {
+   "name": ".gitreview",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "92ff859b51428f19f4a5343d05c7d709e1c9c9e4e6463c1ebaee20048817e943",
+   "format": 1
+  },
+  {
+   "name": ".gitignore",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8711ddd17aeb8c9270d92247dec30b2f8af4d8eb1346e4eb9cf1d12a342f403a",
+   "format": 1
+  },
+  {
+   "name": "doc",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "doc/source",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "doc/source/_static",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "doc/source/_static/ansible-role-ara-web.png",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "36ba1295f3a905b02c8b83c93ede6736861dc842fad3cb44bfd348097962e7f8",
+   "format": 1
+  },
+  {
+   "name": "doc/source/_static/ansible-role-ara-api.png",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1eceda2b4dc8c39fb24a402325ab90aaefd2178b55dae8f2892bb7b63df8722f",
+   "format": 1
+  },
+  {
+   "name": "doc/source/_static/ara-with-icon.png",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "448ae893a91ab3bfc61a324f0d418f58e7208c9d249131879d8a39bb144aaba0",
+   "format": 1
+  },
+  {
+   "name": "roles",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/defaults/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c16cd0e38ad8b6a305e7a6be8da340b8f983d224e7eb896376896e7ff8b86a02",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/vars",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/vars/CentOS.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6e2eb923b83cabd256e58ce2372149e47827fb34dd41d6b57d4c2d077f9bbf6a",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/vars/Fedora.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d296f86ef14f8a1152425498c28c8a6f862ae1456986518e5c5a3ba81ef8a83d",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/vars/Ubuntu.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "31b6cfb44832df73f65c8808c50ad54844101fbbe26cbb47ed0daf8fba58585d",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/vars/RedHat.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6e2eb923b83cabd256e58ce2372149e47827fb34dd41d6b57d4c2d077f9bbf6a",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/vars/Debian.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "31b6cfb44832df73f65c8808c50ad54844101fbbe26cbb47ed0daf8fba58585d",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/handlers/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "25e0d82daa2f2c6ee08dcc9134fdf6ceec8a669bce2661e7a0b6253fa21dda08",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/templates/ara-api.service.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d622a55ccc1bb8ce65effe55d184dff8e7c6bb94d29f6dbf804d31f6110f4022",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/files",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/files/ara-gunicorn.te",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b03bad8be56540acd57e71efcfdf5f5c53d1eb9f466e9cdc70d3a724f938dbd1",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/tasks/wsgi_server",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/tasks/wsgi_server/gunicorn.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cfece4bca85e1c5c9c3d8b4dca43138e51ed0fd12483e10bafbec7350043e90e",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/tasks/config.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d0097aa1e2d3d0255d29bedf86a83899d90a49004f9b8ef865eaa667045c7f17",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/tasks/install",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/tasks/install/distribution.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c587dc933f06595555d652cd1fe8a6ab3d48a839226c9f75d77177b4932aaaeb",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/tasks/install/source.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c02cf7500cd6a6400a671d8c37bf2d9f6afb33f8e43112fe782bf1aa91e40126",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/tasks/install/pypi.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "98519093103e6f328b5f7dbf8743db2a17dfdb25dcd2dbf7a41341843ae14e25",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/tasks/pre-requirements.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bd4c074185f714e7c644ac0459ab0e61911e11796f5292849181a6d0f0a3295d",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/tasks/database_engine",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/tasks/database_engine/ara.server.db.backends.distributed_sqlite.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fad9eb19be940078b6b13f3523f727c237c21ba0ebec655478aa690ceafb1ee1",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/tasks/database_engine/django.db.backends.mysql.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8e4d10133a35ddb273b83ce6a042cfd896925cc9c4a2c8f03b0f24c8c93b5b52",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/tasks/database_engine/django.db.backends.sqlite3.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "541082afb9171408aed07bf61ac0e2d23ac4545becf151817491bd3b11f7b3be",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/tasks/database_engine/django.db.backends.postgresql.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b79724cf1cd46c43efb1e42c881f4d2c97410ac8fe3503b4cf712eaf2f615f5b",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/tasks/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "66fcab56e2425382a355bad791f98bf0afdfa64abb71007040e37a7fedb504d6",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "687b825a79c2bdcc182d17abdb7d13ee23767d715eb6aec9bb2b4a28f94262d7",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_api/meta/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f8e338afb3cb45bf8ad9aacce492df2d7e147c06a2a1373bed03c41ef96a1be5",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_web",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_web/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_web/defaults/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "494be9f54b341f2d4058006b78687484cdd385b1482adba71b941cde8654dfaa",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_web/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_web/handlers/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bf9c75cdb80b7e37ac5c662ae237ca35751353e4e4bdae47adf32e2441bf5b3a",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_web/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_web/templates/ara-web.service.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "343d814b34373493cfcf18931c2e3fef5ea2f52a9bf1dbdbed1da56a6181cee7",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_web/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_web/tasks/nodejs.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1199e8e21f3eaf5e408f51c85c7831a677045704016067ed79f4ee31a1382017",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_web/tasks/install",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_web/tasks/install/source.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "66c70e8cf8855c8cb8cfd37fe40d9917ced319e57106774403f6fd48352810e2",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_web/tasks/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "14ea64b2d256e5f53ffd46ab5c13a7c1ff1fbbf0303dcbf2d7e22b723501532f",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_web/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "69ff6279c7322f34c086d2d8d2365ec0c80aeeda8b2df54e0c97efc2593f7a39",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_web/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_web/meta/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2adccdc6658f24f00910b8e25b724703427881ef4dc482da278236ce3a9b2b09",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_frontend_nginx",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_frontend_nginx/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_frontend_nginx/defaults/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "739505773de945df84da2a6658846ec5a564265e795d6accb9395d0cd885ec68",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_frontend_nginx/vars",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_frontend_nginx/vars/CentOS.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "151ea6c0367c3c02e72920c240533b9a13bd89ff1a5d7f179d86ac3e94c5d632",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_frontend_nginx/vars/Fedora.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "151ea6c0367c3c02e72920c240533b9a13bd89ff1a5d7f179d86ac3e94c5d632",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_frontend_nginx/vars/Ubuntu.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3d8994be0473548e8dc01dd456736d3631f7de02c445d6368b48a8fbb0abe184",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_frontend_nginx/vars/RedHat.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "151ea6c0367c3c02e72920c240533b9a13bd89ff1a5d7f179d86ac3e94c5d632",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_frontend_nginx/vars/Debian.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3d8994be0473548e8dc01dd456736d3631f7de02c445d6368b48a8fbb0abe184",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_frontend_nginx/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_frontend_nginx/handlers/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "94dbdcc75318ae53585471129a9db3340bf1fb370286298a015e9557f2746cce",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_frontend_nginx/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_frontend_nginx/templates/ara-web.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5362336e3d1d62c8490a1c63d52c5ad2b6a0ff9c88081be55c5f9cc9f203802b",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_frontend_nginx/templates/ara-api.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5851ae18b50aad893835281c181099f7e3f3e0fabe02067ada456095b1005f94",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_frontend_nginx/templates/ara-api-ssl.conf.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5919889e88ea0c1909f5948d88c96187d272de9da10676b1ec0124b9223fb305",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_frontend_nginx/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_frontend_nginx/tasks/main.yaml.orig",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c01ec0229ac25a8071be378acbbc4aa3cf665890f584b07943b79245a0142f19",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_frontend_nginx/tasks/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a1073696e4a9d455d421d9d43ff127e172372ecab5326204a55fe3c1bd91b0b3",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_frontend_nginx/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "94dbe28630932f1efb2fcf115a187016b79eddf7147036f6f2cc8e69f811ef25",
+   "format": 1
+  },
+  {
+   "name": "roles/ara_frontend_nginx/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/ara_frontend_nginx/meta/main.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "eeebc19ca04c1d63af9fbcf4fe32944c0610147d18a38fff3e10920fc546465b",
+   "format": 1
+  },
+  {
+   "name": ".zuul.d",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".zuul.d/project.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5e6e609f574c404f37b3b18bd81a32aba74527390fd870486284a7560bbdcf53",
+   "format": 1
+  },
+  {
+   "name": ".zuul.d/nodesets.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4acbd61be8075c520bf9a7a6d873899591e03d0471769bc5f7daef52cff65dab",
+   "format": 1
+  },
+  {
+   "name": ".zuul.d/jobs.yaml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9f8b1618862142f2354087d524bcee3e802640011dfc92f3a30d1c6f39bc1dda",
+   "format": 1
+  },
+  {
+   "name": "README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "af84b3b7e3625d18e5d8116550e0669d00c1e6735b7232dd56f51810a69203b1",
+   "format": 1
+  },
+  {
+   "name": "meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "meta/runtime.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "12743023e313fff186d4784f13bfa5d40e18b31c46ba9c0898b7e0ebbe208ced",
+   "format": 1
+  }
+ ],
+ "format": 1
+}

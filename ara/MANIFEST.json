@@ -1,0 +1,28 @@
+{
+ "collection_info": {
+  "namespace": "recordsansible",
+  "name": "ara",
+  "version": "0.1.0",
+  "authors": [
+   "ARA Records Ansible (https://github.com/ansible-community/ara)"
+  ],
+  "readme": "README.md",
+  "tags": [],
+  "description": null,
+  "license": [],
+  "license_file": "LICENSE",
+  "dependencies": {},
+  "repository": "https://github.com/ansible-community/ara-collection",
+  "documentation": "https://github.com/ansible-community/ara-collection",
+  "homepage": "https://ara.recordsansible.org",
+  "issues": "https://github.com/ansible-community/ara-collection/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "a130df4c851fad567e2f04c44446ff0116a2978184f69f342b99ca557d402d13",
+  "format": 1
+ },
+ "format": 1
+}

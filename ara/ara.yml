@@ -1,0 +1,15 @@
+---
+- name: install ara
+  hosts: sv2a-devb7
+  gather_facts: yes
+  #  become_method: sudo
+  become: yes
+  roles:
+    - role: ara_web
+      tags: ara_web_install
+      
+    - role: ara_api
+      tags: ara_api_install
+
+    - role: ara_frontend_nginx
+      tags: ara_frontend_nginx_install

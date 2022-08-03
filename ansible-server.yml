@@ -1,6 +1,6 @@
 ---
 - name: install ansible server
-  hosts: sv2a-devb7
+  hosts: all
   gather_facts: yes
   become_method: sudo
   become: yes
