@@ -4,4 +4,3 @@
  apt update
  apt install --yes ansible
  ansible --version
-
