@@ -1,0 +1,36 @@
+---
+- hosts: all
+  become: true
+
+  tasks:
+  - name: update all packages to their latest version
+    ansible.builtin.shell: |
+      apt update
+
+  - name: install the Java 8 OpenJDK
+    ansible.builtin.apt:
+      name: 'openjdk-8-jdk'
+      state: latest
+
+  - name: add the Jenkins Debian repository
+    ansible.builtin.shell: |
+      wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key |  apt-key add -
+
+  - name: add the Jenkins repository to the system
+    ansible.builtin.shell: |
+      sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+  - name: update all packages to their latest version
+    ansible.builtin.shell: |
+      apt update
+
+  - name: install Jenkins
+    ansible.builtin.apt:
+      name: jenkins
+      state: present
+
+  - name: enabled Jenkins service
+    ansible.builtin.service:
+      name: jenkins
+      enabled: yes
+

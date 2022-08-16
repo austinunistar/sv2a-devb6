@@ -3,8 +3,8 @@
     ansible.builtin.file:
       path: '/var/admin'
       state: directory
-      owner: 'root'
-      group: 'root'
+      owner: 'dev-sysadmins'
+      group: 'dev-sysadmins'
       
   - name: create promethues & grafana data folder
     ansible.builtin.file:
@@ -23,21 +23,27 @@
     ansible.builtin.template:
       src: "{{ item.src }}"
       dest: "{{ item.dest }}"
-      owner: 'root'
-      group: 'root'
+      owner: 'nobody'
+      group: 'nogroup'
     loop:
       - { src: 'prometheus.yml', dest: '/var/admin/prometheus-grafana/prometheus/prometheus.yml' }
       - { src: 'config.monitoring.j2', dest: '/var/admin/prometheus-grafana/grafana/config.monitoring' }
       - { src: 'dashboard.yml', dest: '/var/admin/prometheus-grafana/grafana/provisioning/dashboards/dashboard.yml' }
       - { src: 'datasource.yml', dest: '/var/admin/prometheus-grafana/grafana/provisioning/datasources/datasource.yml' }
   
+  - name: change promethues.yml permission
+    ansible.builtin.file:
+      path: '/var/admin/prometheus-grafana/prometheus/prometheus.yml'
+      state: file
+      owner: 'nobody'
+      group: 'nogroup'
 
   - name: create docker-compose file
     ansible.builtin.template:
       src: 'docker-compose.yml'
       dest: '/var/admin/prometheus-grafana'
-      owner: 'root'
-      group: 'root'
+      owner: 'dev-sysadmins'
+      group: 'dev-sysadmins'
       mode: '0644'
       backup: yes
 

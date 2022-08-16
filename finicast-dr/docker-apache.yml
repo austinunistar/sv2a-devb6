@@ -1,0 +1,9 @@
+---
+- name: install docker apache
+  hosts: all
+  gather_facts: yes
+  become_method: sudo
+  become: yes
+  roles:
+    - role: finicast-dr
+      tags: docker_apache_install

@@ -1,4 +1,13 @@
 ---
+- name: install prometheus & grafana server
+  hosts: all
+  gather_facts: yes
+  become_method: sudo
+  become: yes
+  roles:
+    - role: prometheus-server
+      tags: prometheus_server_install
+
 - name: install ansible server
   hosts: all
   gather_facts: yes

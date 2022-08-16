@@ -1,0 +1,22 @@
+---
+  - name: create docker-compose configuration folder
+    ansible.builtin.file:
+      path: '/var/admin/finicast-dr'
+      state: directory
+      owner: 'dev-sysadmins'
+      group: 'dev-sysadmins'
+
+  - name: create docker-compose file
+    ansible.builtin.template:
+      src: 'docker-compose.yml'
+      dest: '/var/admin/finicast-dr'
+      owner: 'dev-sysadmins'
+      group: 'dev-sysadmins'
+      mode: '0644'
+      backup: yes
+
+  - name: start docker-compose service
+    ansible.builtin.shell: 
+      cmd: 'docker-compose -f docker-compose.yml up -d'
+      chdir: '/var/admin/finicast-dr'
+    tags: docker_compose_start

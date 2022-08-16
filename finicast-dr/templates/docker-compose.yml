@@ -1,0 +1,33 @@
+version: '3.8'
+
+networks:
+    fe:
+
+services:
+    apache_fe1:
+      image: docker.io/bitnami/apache:2.4
+      container_name: apache_fe1
+      ports:
+        - "31080:8080"
+        - "31443:8443"
+      volumes:
+        - ./code:/var/www/html
+        - ./httpd/httpd.conf:/usr/local/apache2/conf/httpd.conf
+        - ./path/to/apache-certs:/certs
+      networks:
+        - fe
+      restart: unless-stopped
+
+    apache_fe2:
+      image: docker.io/bitnami/apache:2.4
+      container_name: apache_fe2
+      ports:
+        - "31081:8080"
+        - "31444:8443"
+      volumes:
+        - ./code:/var/www/html
+        - ./httpd/httpd.conf:/usr/local/apache2/conf/httpd.conf
+        - ./path/to/apache-certs:/certs
+      networks:
+        - fe
+      restart: unless-stopped
