@@ -1,0 +1,36 @@
+---
+  - name: apt update
+    ansible.builtin.shell: |
+            apt update
+
+  - name: create a directory for settings
+    ansible.builtin.file:
+      path: '~/.ara/server'
+      state: directory
+      owner: 'nobody'
+      group: 'nogroup'
+ 
+  - name: create sqlite database with docker
+    ansible.builtin.shell: |
+      docker run --name ara --detach --tty --volume ~/.ara/server:/opt/ara -p 8000:8000 docker.io/recordsansible/ara-api:latest
+    ignore_errors: yes
+
+  - name: install Ansible and ARA (without API server dependencies) for the current user
+    ansible.builtin.apt:
+      name: "{{ item }}"
+      state: present
+    loop:
+      - python3-pip
+    ignore_errors: yes
+
+  - name: configure Ansible to use the ARA callback plugin
+    ansible.builtin.shell: |
+      python3 -m pip install --user ansible ara
+ 
+  - name: configure Ansible to use the ARA callback plugin
+    ansible.builtin.shell: |
+      export ANSIBLE_CALLBACK_PLUGINS="$(python3 -m ara.setup.callback_plugins)"
+    
+  - name: set up the ARA callback to know where the API server is located
+    ansible.builtin.shell: |
+      export ARA_API_CLIENT="http";export ARA_API_SERVER="http://127.0.0.1:8000"
