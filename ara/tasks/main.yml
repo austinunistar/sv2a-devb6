@@ -21,6 +21,7 @@
       state: present
     loop:
       - python3-pip
+      - acct
     ignore_errors: yes
 
   - name: configure Ansible to use the ARA callback plugin
