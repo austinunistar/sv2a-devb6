@@ -4,6 +4,7 @@ sv2a-devb7 ansible_ssh_user=dev-sysadmins ansible_ssh_pass=1qazXSW@ ansible_ssh_
 sv2a-devb8 ansible_ssh_user=dev-sysadmins ansible_ssh_pass=f-naNwHo^TF.LFyMCy3kb#j> ansible_ssh_host=172.30.40.41
 sv2a-devb9 ansible_ssh_user=dev-sysadmins ansible_ssh_pass=1qazXSW@ ansible_ssh_host=172.30.40.42
 sv2a-devb10 ansible_ssh_user=dev-sysadmins ansible_ssh_pass=1qazXSW@ ansible_ssh_host=172.30.40.43
+sv2a-devb11 ansible_ssh_user=dev-sysadmins ansible_ssh_pass=1qazXSW@ ansible_ssh_host=172.30.40.44
 sv2a-devb12 ansible_ssh_user=dev-sysadmins ansible_ssh_pass=1qazXSW@ ansible_ssh_host=172.30.40.45
 sv2a-devb13 ansible_ssh_user=dev-sysadmins ansible_ssh_pass=1qazXSW@ ansible_ssh_host=172.30.40.46
 sv2a-devgreenbone ansible_ssh_user=dev-sysadmins ansible_ssh_pass=1qazXSW@ ansible_ssh_host=172.30.41.202
