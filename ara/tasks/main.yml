@@ -15,6 +15,7 @@
       docker run --name ara --detach --tty --volume ~/.ara/server:/opt/ara -p 8000:8000 docker.io/recordsansible/ara-api:latest
     ignore_errors: yes
 
+
   - name: install python3.7 and Ansible and ARA (without API server dependencies) for the current user
     ansible.builtin.apt:
       name: "{{ item }}"
