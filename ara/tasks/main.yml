@@ -15,7 +15,6 @@
       docker run --name ara --detach --tty --volume ~/.ara/server:/opt/ara -p 8000:8000 docker.io/recordsansible/ara-api:latest
     ignore_errors: yes
 
-
   - name: install python3.7 and Ansible and ARA (without API server dependencies) for the current user
     ansible.builtin.apt:
       name: "{{ item }}"
@@ -28,17 +27,23 @@
   - name: configure Ansible to use the ARA callback plugin
     ansible.builtin.shell: |
       python3.7 -m pip install --user ansible ara
- 
-  - name : remove python3.6
-    ansible.builtin.apt:
-      name: python3.6
-      state: absent
   
   - name : install python3-pip
     ansible.builtin.apt:
       name: python3-pip
       state: present
-      
+
+#####Config ARA_ALLOWED_HOSTS####
+# 1. Configuration variables of ARA_ALLOWED_HOSTS
+# sudo vim ~/.ara/server/settings.yaml
+#  ALLOWED_HOSTS:
+#    - 127.0.0.1
+#    - localhost
+#    - <Add your ARA host ip address or FQDN name>
+
+# 2. Restart your ARA container
+# sudo docker restart <ARA container id>
+
   - name: configure Ansible to use the ARA callback plugin
     ansible.builtin.shell: |
       export ANSIBLE_CALLBACK_PLUGINS="$(python3 -m ara.setup.callback_plugins)"
